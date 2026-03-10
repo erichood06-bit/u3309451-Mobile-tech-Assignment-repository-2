@@ -24,7 +24,13 @@ public class StartActivity extends AppCompatActivity {
             return insets;
         });
 
+
+
+
+
         Button button = findViewById(R.id.buttonUIEvent);
+
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,5 +40,18 @@ public class StartActivity extends AppCompatActivity {
 
             }
         });
+
+        Button buttonL = findViewById(R.id.buttonLocationS);
+        buttonL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartActivity.this, LocationServicesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
+
+
 }
